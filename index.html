@@ -284,8 +284,8 @@
 
         <!-- THIRD PROJECT -->
         <div class="thirdpro">
-            <img src="./assets/Resto.avif" alt="Restuarant"/>
-            <h4>RESTUARANT</h4>
+            <img src="./assets/wp.png" alt="Webportfolio"/>
+            <h4>WEB PORTFOLIO</h4>
             <p>HTML, CSS, JAVASCIRPT, SQL AND PHP</p>
             <div class="thirdprobtn">
                 <button class="thirdprobtnone" onclick="location.href=''">Code</button>
@@ -293,8 +293,40 @@
             </div>
         </div>
 
+        <!-- FOURTH PROJECT -->
+        <div class="fourthpro">
+            <img src="./assets/es.jpg" alt="Webportfolio"/>
+            <h4>ENROLLMENT SYSTEM (on going)</h4>
+            <p>HTML, CSS, JAVASCIRPT, SQL AND PHP</p>
+            <div class="fourthprobtn">
+                <button class="fourthprobtnone" onclick="location.href=''">Code</button>
+            </div>
+        </div>
+
     </div>
 </section>
+
+<!-- CONTACTS -->
+<section id="contacts">
+    <div class="contextme">CONTACT ME :></div>
+    <div class="conemail">
+        <form id="conform" action="send-message.php" method="POST">
+            <label for="name" class="namelabel">Name (Required):</label>
+            <input type="text" id="name" name="name" required class="textinput">
+      
+            <label for="email" class="emaillabel">Email (Required):</label>
+            <input type="email" id="email" name="email" required class="emailinput">
+      
+            <label for="message" class="messagelabel">Message:</label>
+            <textarea id="message" name="message" required class="messagearea"></textarea>
+      
+            <button type="submit" class="submit-button">Send Message</button>
+        </form>
+          
+        <div id="error-message" class="error" style="display: none;"></div>
+    </div>
+</section>
+
 
 <script src="script.js"></script>
 </body>

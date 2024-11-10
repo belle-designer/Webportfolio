@@ -410,6 +410,10 @@ a:hover {
     margin-bottom: 20px; /* Space between title and paragraph */
 }
 
+.prodesc {
+    padding-bottom: 15px;
+}
+
 .allpro {
     display: flex;
     justify-content: space-evenly; /* Space between the boxes */
@@ -420,7 +424,7 @@ a:hover {
 }
 
 /* Project Box Styling (Common for all) */
-.firstpro, .secondpro, .thirdpro {
+.firstpro, .secondpro, .thirdpro, .fourthpro {
     border: 2px solid #000; /* Black border */
     padding: 15px;           /* Add some padding inside the box */
     margin: 10px 0;          /* Space outside the box */
@@ -431,29 +435,29 @@ a:hover {
     transition: transform 0.3s ease, box-shadow 0.3s ease; /* Optional transition for hover effect */
 }
 
-.firstpro img, .secondpro img, .thirdpro img {
+.firstpro img, .secondpro img, .thirdpro img, .fourthpro img {
     width: 100%;             /* Make image responsive */
     height: auto;
     border-bottom: 2px solid #ddd; /* Bottom border on image */
     margin-bottom: 10px;      /* Space between image and text */
 }
 
-.firstpro h4, .secondpro h4, .thirdpro h4 {
+.firstpro h4, .secondpro h4, .thirdpro h4, .fourthpro h4 {
     padding: 5px;
     font-size: 1.2rem;        /* Slightly smaller font size for titles */
 }
 
-.firstpro p, .secondpro p, .thirdpro p {
+.firstpro p, .secondpro p, .thirdpro p, .fourthpro p {
     font-size: 1rem;
 }
 /* Container Styling for Buttons */
-.probtn, .secondprobtn, .thirdprobtn {
+.probtn, .secondprobtn, .thirdprobtn, .fourthprobtn {
     text-align: center;
     margin-top: 15px; /* Space between text and buttons */
 }
 
 /* Consistent Button Styles */
-.probtn button, .secondprobtn button, .thirdprobtn button {
+.probtn button, .secondprobtn button, .thirdprobtn button, .fourthprobtn button {
     padding: 0.6rem 1.2rem;
     margin: 0.3rem;
     border: none;
@@ -464,7 +468,7 @@ a:hover {
 }
 
 /* Button Colors - Blue for Code and Green for View */
-.probtnone, .secondprobtnone, .thirdprobtnone {
+.probtnone, .secondprobtnone, .thirdprobtnone,.fourthprobtnone {
     background-color: #007bff; /* Blue */
     color: white;
 }
@@ -475,6 +479,73 @@ a:hover {
 }
 
 /* Hover Effects for All Buttons */
-.probtn button:hover, .secondprobtn button:hover, .thirdprobtn button:hover {
+.probtn button:hover, .secondprobtn button:hover, .thirdprobtn button:hover, .fourthprobtn button:hover {
     opacity: 0.8;
+}
+
+/* CONTACT ME */
+.contextme {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.conemail {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+label {
+    font-size: 14px;
+    color: #333;
+    margin: 10px 0 5px;
+    display: block;
+}
+
+.textinput,
+.emailinput,
+.messagearea {
+    width: 100%;
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    margin-bottom: 15px;
+}
+
+.textinput:focus,
+.emailinput:focus,
+.messagearea:focus {
+    border-color: #007BFF;
+    outline: none;
+}
+
+textarea.messagearea {
+    height: 150px;
+    resize: vertical;
+}
+
+.submit-button {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.submit-button:hover {
+    background-color: #0056b3;
+}
+
+.error {
+    color: red;
+    font-size: 14px;
+    margin-top: 10px;
+    display: none;
 }
