@@ -1,0 +1,480 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:wght@300;400;500;600&display=swap');
+
+/* Prevent horizontal scroll */
+html, body {
+    overflow-x: hidden; /* This hides horizontal scroll */
+    width: 100%; /* Ensure the page width doesn't exceed the viewport width */
+}
+
+/* Optional: Apply styles to make sure the body and HTML always occupy full height */
+html, body {
+    height: 100%;
+}
+
+/* Ensuring the body doesn't overflow horizontally */
+body {
+    overflow-y: auto; /* Ensure vertical scroll is enabled */
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    overflow-x: hidden; /* Remove horizontal scrollbar */
+    width: 100%; /* Prevent overflow in the horizontal direction */
+    height: 100%; /* Ensure full height */
+    overflow-y: auto; /* Enable vertical scrolling */
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    font-size: 1rem;
+    color: #050a30;
+}
+
+/* Transition */
+a, 
+.btn {
+    transition: all 300ms ease;
+}
+
+/* Your other CSS rules */
+
+
+/*desktop nav*/
+nav,
+.nav-links {
+    display: flex;
+}
+
+nav {
+    justify-content:space-between;
+    align-items:center;
+    height: 10vh;
+    background-color: #050a30;
+    padding: 0 50px; 
+}   
+
+.logo {
+    color: white;
+    align-items: center;
+    size: 1rem;
+}
+
+.logo:hover {
+    cursor: default;
+}
+
+.nav-links {
+    gap: 2rem;
+    list-style: none;
+    font-size: 1rem;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+    text-decoration-color: #050a30;
+}
+
+a:hover {
+    color: grey;
+    text-decoration: underline;
+    text-underline-offset: 1rem;
+    text-decoration-color: rgb(181, 181, 181) ;
+}
+
+/*mobile nav*/
+
+#mobile-nav {
+    display: none;
+}
+
+.mobile-menu {
+    position: relative;
+    display: inline-block;
+}
+
+.mobile-icon {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 24px;
+    width: 30px;
+    cursor: pointer;
+}
+
+.mobile-icon span {
+    width: 100%;
+    height: 2px;
+    background-color: white;
+    transition: all 0.3 ease-in-out;
+}
+
+.menu-links {
+    position: absolute;
+    top: 100%;
+    right: 0%;
+    background-color: #050a30;
+    width: fit-content;
+    max-height: 0;
+    overflow: hidden;
+    transition: all 0.3 ease-in-out;
+}
+
+.menu-links a {
+    display: block;
+    padding: 10px;
+    text-align: center;
+    font-size: 1rem;
+    color: white;
+    text-decoration: none;
+    transition: all 0.3 ease-in-out;
+}
+
+.menu-links li {
+    list-style: none;
+}
+
+.menu-links.open {
+    max-height: 300px;
+}
+
+.mobile-icon.open span:first-child {
+    transform: rotate(45deg) translate(10px, 5px);
+}
+
+
+.mobile-icon.open span:nth-child(2) {
+    opacity: 0;
+}
+
+.mobile-icon.open span:last-child {
+    transform: rotate(-45deg) translate(10px, -5px);
+}
+
+.mobile-icon span:first-child {
+    transform:none;
+}
+
+.mobile-icon span:first-child {
+    opacity: 1;
+}
+
+.mobile-icon span:first-child {
+    transform: none;
+}
+
+/*SECTION*/
+
+/* Overall section styling */
+#profile {
+    display: flex;
+    align-items: center; /* Vertically center content */
+    justify-content: space-evenly; /* Space out text and picture */
+    padding: 100px;
+}
+
+/* Container for text and picture */
+.profile-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    gap: 20px; /* Adjust the gap to control the space between the text and the picture */
+}
+
+
+/* Text section */
+.profile-info {
+    max-width: 60%; /* Adjust this as needed to control the width of the text part */
+}
+
+/* Profile name and course styling */
+.profile-name {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.profile-course {
+    font-size: 1.2rem;
+    color: #666;
+}
+
+/* Description text styling */
+.profile-description {
+    font-size: 1rem;
+    color: #444;
+    margin-top: 10px;
+}
+
+/* Button container styling */
+.btn-container {
+    margin-top: 20px;
+}
+
+.btn {
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+/* Social icons styling */
+#socials-container {
+    margin-top: 20px;
+}
+
+.icon {
+    width: 25px;
+    height: 25px;
+    margin-right: 25px;
+    cursor: pointer;
+}
+
+/* Picture container */
+.picture-container {
+    max-width: 25%; /* Adjust width of image */
+}
+
+.picture-container img {
+    width: 100%;
+    border-radius: 50%;
+}
+
+/*DIVIDER*/ 
+
+  .divider {
+    width: 100%; /* Full width of the viewport */
+    overflow: hidden; /* No scrollbars at all */
+  }
+  
+  .text-with-border {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-top: 2px solid black; /* Top border */
+    border-bottom: 2px solid black; /* Bottom border */
+    padding: 10px 0;
+    background-color: #050a30; /* Optional: Background color for the entire line */
+    flex-wrap: nowrap; /* Prevent wrapping */
+    width: 100%;
+    box-sizing: border-box; /* Ensure padding doesn't push content outside */
+  }
+  
+  .text-item {
+    display: inline-flex;
+    color: white; /* White text */
+    padding: 5px 10px;
+    border-radius: 5px; /* Optional: Rounded corners for each "tile" */
+    margin: 0 10px;
+    font-size: 16px; /* Adjust font size for scaling */
+    white-space: nowrap; /* Prevent text wrapping inside each item */
+    flex-shrink: 1; /* Allow items to shrink if necessary */
+  }
+  
+  .separator {
+    display: inline-flex;
+    color: white; /* Separator color */
+    padding: 0 5px;
+    margin: 0 10px;
+    font-size: 20px; /* Adjust separator size */
+  }
+
+/*ABOUT ME*/
+
+/* PAGE */
+.start-about {
+    text-align: center; /* Center the content inside the section */
+    padding: 50px 20px; /* Add some padding to space things out */
+}
+
+/*TECHNOLOGIES TEXT */
+.techtext {
+    text-decoration: underline;
+    text-underline-offset: 10px; /* Add space between the text and the underline */
+    font-size: 30px; /* Make the text a bit smaller */
+    margin-bottom: 20px; /* Space between title and paragraph */
+}
+
+.technologies p {
+    font-size: 14px;
+    margin-bottom: 30px;
+}
+
+/* CONTAINER TECHNOLOGIES IMAGES */
+.tech-images {
+    display: flex;
+    justify-content: center; /* Align items horizontally */
+    flex-wrap: wrap; /* Allow wrapping when needed */
+    gap: 20px; /* Space between items */
+}
+
+/* TECHNOLOGIES IMAGES */
+.tech-item {
+    text-align: center; /* Center text under each image */
+    max-width: 120px; /* Limit the width of each image and caption block */
+}
+
+.tech-item img {
+    width: 100px; /* Make the images smaller */
+    height: 100px; /* Make the images square */
+    object-fit: cover; /* Ensure images maintain aspect ratio */
+    margin-bottom: 10px; /* Space between image and caption */
+}
+
+/* TECHNOLOGIES IMAGE CAPTION*/
+.tech-item p {
+    font-size: 12px; /* Smaller font for captions */
+    margin: 0;
+}
+
+/*EDUCATION AND SKILLS*/
+.eandp {
+    display: flex;
+    text-align: center; /* Center the content inside the section */
+    align-items: center;
+    justify-content: space-around;
+    padding: 50px 20px; /* Add some padding to space things out */ 
+}
+
+/* EDUCATION */
+.eductext {
+    text-decoration: underline;
+    text-underline-offset: 10px; /* Add space between the text and the underline */
+    font-size: 30px; /* Make the text a bit smaller */
+    margin-bottom: 20px; /* Space between title and paragraph */
+}
+
+/* EDUCATION IMAGE */
+.educ {
+    font-size: 20px;
+}
+
+.educdesc {
+    font-size: 15px;
+}
+
+.educpic {
+    width: 100px; /* Make the images smaller */
+    height: 100px; /* Make the images square */
+    object-fit: cover; /* Ensure images maintain aspect ratio */
+    margin-bottom: 10px; /* Space between image and caption */
+}
+
+/*SKILLS*/
+.s-text {
+    text-decoration: underline;
+    text-underline-offset: 10px; /* Add space between the text and the underline */
+    font-size: 30px; /* Make the text a bit smaller */
+    margin-bottom: 20px; /* Space between title and paragraph */
+}
+
+/* SKILLS IMAGES */
+.skillphoto {
+    display: flex;
+    justify-content: center; /* Align items horizontally */
+    flex-wrap: wrap; /* Allow wrapping when needed */
+    gap: 20px; /* Space between items */
+}
+
+.skillimage {
+    text-align: center; /* Center text under each image */
+    max-width: 180px; /* Limit the width of each image and caption block */
+}
+
+.skillimage img {
+    width: 150px; /* Make the images smaller */
+    height: 150px; /* Make the images square */
+    object-fit: cover; /* Ensure images maintain aspect ratio */
+    margin-bottom: 10px; /* Space between image and caption */
+}
+
+.skillimage p {
+    font-size: 15px; /* Smaller font for captions */
+    margin: 0;
+}
+
+/* PROJECT TEXT */
+#project {
+    text-align: center; /* Center the content inside the section */
+    padding: 50px 20px; /* Add some padding to space things out */
+}
+
+.protext {
+    text-decoration: underline;
+    text-underline-offset: 10px; /* Add space between the text and the underline */
+    font-size: 30px; /* Make the text a bit smaller */
+    margin-bottom: 20px; /* Space between title and paragraph */
+}
+
+.allpro {
+    display: flex;
+    justify-content: space-evenly; /* Space between the boxes */
+    gap: 10px; /* Adds space between the individual project boxes */
+    flex-wrap: wrap; /* Allow wrapping of items when screen size is smaller */
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+/* Project Box Styling (Common for all) */
+.firstpro, .secondpro, .thirdpro {
+    border: 2px solid #000; /* Black border */
+    padding: 15px;           /* Add some padding inside the box */
+    margin: 10px 0;          /* Space outside the box */
+    border-radius: 10px;     /* Rounded corners */
+    background-color: #f9f9f9; /* Light background color */
+    width: 280px;            /* Default width for the project boxes */
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Optional transition for hover effect */
+}
+
+.firstpro img, .secondpro img, .thirdpro img {
+    width: 100%;             /* Make image responsive */
+    height: auto;
+    border-bottom: 2px solid #ddd; /* Bottom border on image */
+    margin-bottom: 10px;      /* Space between image and text */
+}
+
+.firstpro h4, .secondpro h4, .thirdpro h4 {
+    padding: 5px;
+    font-size: 1.2rem;        /* Slightly smaller font size for titles */
+}
+
+.firstpro p, .secondpro p, .thirdpro p {
+    font-size: 1rem;
+}
+/* Container Styling for Buttons */
+.probtn, .secondprobtn, .thirdprobtn {
+    text-align: center;
+    margin-top: 15px; /* Space between text and buttons */
+}
+
+/* Consistent Button Styles */
+.probtn button, .secondprobtn button, .thirdprobtn button {
+    padding: 0.6rem 1.2rem;
+    margin: 0.3rem;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+/* Button Colors - Blue for Code and Green for View */
+.probtnone, .secondprobtnone, .thirdprobtnone {
+    background-color: #007bff; /* Blue */
+    color: white;
+}
+
+.probtntwo, .secondprobtntwo, .thirdprobtntwo {
+    background-color: #28a745; /* Green */
+    color: white;
+}
+
+/* Hover Effects for All Buttons */
+.probtn button:hover, .secondprobtn button:hover, .thirdprobtn button:hover {
+    opacity: 0.8;
+}

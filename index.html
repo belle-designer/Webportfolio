@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="mediaqueries.css">
+</head>
+<body>
+
+<!-- DESKTOP NAV -->
+    <nav id="desktop-nav">
+        <div class="logo">
+            <a href="#profile">rica</a>
+        </div>
+            <div>
+                <ul class="nav-links">
+                    <li><a href="#profile">Home</a></li>
+                    <li><a href="#aboutme">About me</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#contacts">Contacts</a></li>
+                </ul>
+            </div>
+    </nav>
+
+<!-- MOBILE NAV -->
+    <nav id="mobile-nav">
+        <div class="logo">
+            <a href="#profile">rica</a>
+        </div>
+        <div class="mobile-menu">
+            <div class="mobile-icon" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <div class="menu-links">
+                    <li><a href="#profile" onclick="toggleMenu()">Home</a></li>
+                    <li><a href="#aboutme" onclick="toggleMenu()">About me</a></li>
+                    <li><a href="#projects" onclick="toggleMenu()">Project</a></li>
+                    <li><a href="#contacts" onclick="toggleMenu()">Contacts</a></li>
+            </div>
+        </div>
+    </nav>
+
+<!-- PROFILE SECTION -->
+    <section id="profile">
+
+        <!-- TEXT -->
+        <div class="profile-info">
+            <h1 class="profile-name">RICA MAY I. ZALDIVIA</h1>
+            <h3 class="profile-course">BACHELOR OF SCIENCE IN COPUTER SCIENCE</h3>
+            <p class="profile-info">Lorem ipsum odor amet, consectetuer adipiscing elit.</p>
+            
+            <!-- BUTTON -->
+            <div class="btn-container">
+                <button class="btn btn-color-1" onclick="location.href='#contact'">
+                    Contacts
+                </button>
+                <button class="btn btn-color-1" onclick="location.href='#projects'">
+                    Project
+                </button>
+              </div>
+              <div id="socials-container">
+                <img
+                  src="./assets/fb.png"
+                  alt="My facebook profile"
+                  class="icon"
+                  onclick="location.href='https://www.facebook.com/ricazaldiviaaa'"/>
+                <img
+                  src="./assets/ig.png"
+                  alt="My Instagram profile"
+                  class="icon"
+                  onclick="location.href='https://www.instagram.com/ricazaldiviaaa/?next=%2F'"
+                />
+                <img
+                    src="./assets/x.png"
+                    alt="My X profile"
+                    class="icon"
+                    onclick="location.href='https://x.com/dumpyslumpydump'"
+                />
+                <img
+                    src="./assets/gh.png"
+                    alt="My Github profile"
+                    class="icon"
+                    onclick="location.href='https://github.com/ricazaldiviaaa'"
+                />
+                <img
+                    src="./assets/pin.png"
+                    alt="My pinterest profile"
+                    class="icon"
+                    onclick="location.href='https://ph.pinterest.com/neveliaeee/'"
+                />
+              </div>
+            </div>
+
+        <!-- PROFILE PHOTO -->
+        <div class="picture-container">
+            <img src="./assets/rica.jpg" alt="Rica Zaldivia" />
+        </div>
+    </section>
+
+<!-- ABOUT ME DIVIDER UP -->
+    <section id="aboutme">
+        <div class="text-with-border">
+            <span class="text-item">about me</span>
+            <span class="separator">●</span>
+            <span class="text-item">about me</span>
+            <span class="separator">●</span>
+            <span class="text-item">about me</span>
+            <span class="separator">●</span>
+            <span class="text-item">about me</span>
+            <span class="separator">●</span>
+            <span class="text-item">about me</span>
+            <span class="separator">●</span>
+            <span class="text-item">about me</span>
+            <span class="separator">●</span>
+            <span class="text-item">about me</span>
+            <span class="separator">●</span>
+            <span class="text-item">about me</span>
+            <span class="separator">●</span>
+            <span class="text-item">about me</span>
+            <span class="separator">●</span>
+            <span class="text-item">about me</span>
+            <span class="separator">●</span>
+            <span class="text-item">about me</span>
+            <span class="separator">●</span>
+            <span class="text-item">about me</span>
+            <span class="separator">●</span>
+            <span class="text-item">about me</span>
+            <span class="separator">●</span>
+            <span class="text-item">about me</span>
+          </div>
+    </section>
+
+<!-- ABOUT ME INFO SECTION-->
+    <section class="start-about">
+
+        <!-- TECHNOLOGIES AND DESIGN TOOLS -->
+        <div class="technologies">
+
+            <!-- TEXT FOR TECH -->
+            <h1 class="techtext">TECHNOLOGIES & DESIGN TOOLS</h1>
+            <p>Still learning and growing with these kinds of platforms.</p>
+
+            <!-- IMAGES FOR TECH -->
+            <div class="tech-images">
+                <div class="tech-item">
+                    <img src="./assets/java.png" alt="java" />
+                    <p>Java</p>
+                </div>
+                <div class="tech-item">
+                    <img src="./assets/python.png" alt="python" />
+                    <p>Python</p>
+                </div>
+                <div class="tech-item">
+                    <img src="./assets/js.png" alt="javascript" />
+                    <p>JavaScript</p>
+                </div>
+                <div class="tech-item">
+                    <img src="./assets/html.png" alt="html" />
+                    <p>HTML</p>
+                </div>
+                <div class="tech-item">
+                    <img src="./assets/css.png" alt="css" />
+                    <p>CSS</p>
+                </div>
+                <div class="tech-item">
+                    <img src="./assets/sql.png" alt="sql" />
+                    <p>SQL</p>
+                </div>
+                <div class="tech-item">
+                    <img src="./assets/figma.png" alt="figma" />
+                    <p>Figma</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- EDUCATION AND SKILLS -->
+        <div class="eandp">
+
+            <!-- EDUCATION -->
+            <div class="education">
+
+                <!-- EDUCATION TEXT AND PHOTO -->
+                <h1 class="eductext">EDUCATION</h1>
+                    <img src="./assets/figma.png" alt="figma" class="educpic"/>
+                    <h2 class="educ">Bachelor of Science in Computer Science</h2>
+                    <p class="educdesc">Cavite State University Bacoor Campus (Currently)</p>
+                    <h2 class="educ">Science, Technology, Engineering, and Mathematics</h2>
+                    <p class="educdesc">General Juan Castañeda Senior High School (2020-2022)</p>
+            </div>
+
+            <!-- SKILLS -->
+            <div class="skills">
+
+                <!-- SKILLS TEXT -->
+                <h1 class="s-text">SKILLS</h1>
+
+                <!-- SKILLS IMAGE W/ CAPTION -->
+                <div class="skillphoto">
+                    <div class="skillimage">
+                        <img src="./assets/org.png" alt="Organization"/>
+                        <p>Organization Skills</p>
+                    </div>
+                    <div class="skillimage">
+                        <img src="./assets/adaptation.png" alt="Adaptation"/>
+                        <p>Adaptation Skills</p>
+                    </div>
+                    <div class="skillimage">
+                        <img src="./assets/empathy.png" alt="Empathy"/>
+                        <p>Empathy Skills</p>
+                    </div>
+                    <div class="skillimage">
+                        <img src="./assets/reliability.png" alt="Reliability"/>
+                        <p>Reliability Skills</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+<!-- ABOUT ME DIVIDER DOWN -->
+<section id="aboutme">
+    <div class="text-with-border">
+        <span class="text-item">about me</span>
+        <span class="separator">●</span>
+        <span class="text-item">about me</span>
+        <span class="separator">●</span>
+        <span class="text-item">about me</span>
+        <span class="separator">●</span>
+        <span class="text-item">about me</span>
+        <span class="separator">●</span>
+        <span class="text-item">about me</span>
+        <span class="separator">●</span>
+        <span class="text-item">about me</span>
+        <span class="separator">●</span>
+        <span class="text-item">about me</span>
+        <span class="separator">●</span>
+        <span class="text-item">about me</span>
+        <span class="separator">●</span>
+        <span class="text-item">about me</span>
+        <span class="separator">●</span>
+        <span class="text-item">about me</span>
+        <span class="separator">●</span>
+        <span class="text-item">about me</span>
+        <span class="separator">●</span>
+        <span class="text-item">about me</span>
+        <span class="separator">●</span>
+        <span class="text-item">about me</span>
+        <span class="separator">●</span>
+        <span class="text-item">about me</span>
+      </div>
+</section>
+
+<!-- PROJECT -->
+<section id="project">
+    <h2 class="protext">MY PROJECT(S)</h2>
+    <p class="prodesc">This is my past and on going projects </p>
+
+    <div class="allpro">
+        <!-- FIRST PROJECT -->
+        <div class="firstpro">
+            <img src="./assets/1975.webp" alt="The 1975"/>
+            <h4>THE 1975</h4>
+            <p>HTML and CSS</p>
+            <div class="probtn">
+                <button class="probtnone" onclick="location.href=''">Code</button>
+                <button class="probtntwo" onclick="location.href=''">View</button>
+            </div>
+        </div>
+
+        <!-- SECOND PROJECT -->
+        <div class="secondpro">
+            <img src="./assets/as.jpg" alt="Attendance"/>
+            <h4>ATTENDANCE</h4>
+            <p>JAVA (Source code deleted, but here's the design)</p>
+            <div class="secondprobtn">
+                <button class="secondprobtnone" onclick="location.href=''">View Design</button>
+            </div>
+        </div>
+
+        <!-- THIRD PROJECT -->
+        <div class="thirdpro">
+            <img src="./assets/Resto.avif" alt="Restuarant"/>
+            <h4>RESTUARANT</h4>
+            <p>HTML, CSS, JAVASCIRPT, SQL AND PHP</p>
+            <div class="thirdprobtn">
+                <button class="thirdprobtnone" onclick="location.href=''">Code</button>
+                <button class="thirdprobtntwo" onclick="location.href=''">View</button>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<script src="script.js"></script>
+</body>
+</html>
