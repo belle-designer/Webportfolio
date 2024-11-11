@@ -11,7 +11,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         echo "<script>document.getElementById('error-message').innerText = 'All fields are required.'; document.getElementById('error-message').style.display = 'block';</script>";
     } else {
         // Your email address (where you receive the messages)
-        $to = "your-email@example.com"; // Replace with your email address
+        $to = "ricamayzaldivia@gmail.com"; // Replace with your email address
         $subject = "New Contact Form Message from $name";
         
         // Construct the email body (HTML format)
@@ -58,7 +58,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 // Set headers for the reply email
                 $reply_headers = "MIME-Version: 1.0" . "\r\n";
                 $reply_headers .= "Content-Type: text/html; charset=UTF-8" . "\r\n";
-                $reply_headers .= "From: your-email@example.com\r\n";  // Use your email to send the reply
+                $reply_headers .= "From: ricamayzaldivia@gmail.com\r\n";  // Use your email to send the reply
                 $reply_headers .= "Reply-To: your-email@example.com\r\n"; // Reply-to address (you can set this to your email or allow the user to reply to their own email)
 
                 // Send the reply to the user
