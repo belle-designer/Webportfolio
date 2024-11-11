@@ -30,6 +30,14 @@ function validateForm() {
         return false;  // Prevent form submission
     }
 
+    // Simple email validation using regex
+    var emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zAZ0-9.-]+\.[a-zA-Z]{2,}$/;
+    if (!emailRegex.test(email)) {
+        errorMessage.style.display = 'block';
+        errorMessage.innerHTML = 'Please enter a valid email address.';
+        return false;  // Prevent form submission
+    }
+
     // Validate message field
     if (message === '') {
         errorMessage.style.display = 'block';
@@ -37,14 +45,13 @@ function validateForm() {
         return false;  // Prevent form submission
     }
 
-    // Simple email validation using regex
-    var emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
-    if (!emailRegex.test(email)) {
-        errorMessage.style.display = 'block';
-        errorMessage.innerHTML = 'Please enter a valid email address.';
-        return false;  // Prevent form submission
-    }
-
     // If all validations pass, form is submitted
     return true;
 }
+
+// Function to show Thank You message and hide the form
+function showThankYouMessage() {
+    document.getElementById('conform').style.display = 'none'; // Hide the form
+    document.getElementById('thank-you-message').style.display = 'block'; // Show the thank you message
+}
+
