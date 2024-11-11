@@ -1,19 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:wght@300;400;500;600&display=swap');
 
-/* Prevent horizontal scroll */
 html, body {
-    overflow-x: hidden; /* This hides horizontal scroll */
-    width: 100%; /* Ensure the page width doesn't exceed the viewport width */
+    overflow-x: hidden;
+    width: 100%;
 }
 
-/* Optional: Apply styles to make sure the body and HTML always occupy full height */
 html, body {
     height: 100%;
 }
 
-/* Ensuring the body doesn't overflow horizontally */
 body {
-    overflow-y: auto; /* Ensure vertical scroll is enabled */
+    overflow-y: auto; 
 }
 
 * {
@@ -22,10 +19,10 @@ body {
 }
 
 html, body {
-    overflow-x: hidden; /* Remove horizontal scrollbar */
-    width: 100%; /* Prevent overflow in the horizontal direction */
-    height: 100%; /* Ensure full height */
-    overflow-y: auto; /* Enable vertical scrolling */
+    overflow-x: hidden; 
+    width: 100%; 
+    height: 100%; 
+    overflow-y: auto;
 }
 
 body {
@@ -34,16 +31,11 @@ body {
     color: #050a30;
 }
 
-/* Transition */
 a, 
 .btn {
     transition: all 300ms ease;
 }
 
-/* Your other CSS rules */
-
-
-/*desktop nav*/
 nav,
 .nav-links {
     display: flex;
@@ -169,30 +161,28 @@ a:hover {
 
 /*SECTION*/
 
-/* Overall section styling */
 #profile {
     display: flex;
-    align-items: center; /* Vertically center content */
-    justify-content: space-evenly; /* Space out text and picture */
+    align-items: center; 
+    justify-content: space-evenly;
     padding: 100px;
 }
 
-/* Container for text and picture */
+
 .profile-container {
     display: flex;
     align-items: center;
     justify-content: space-between;
     width: 100%;
-    gap: 20px; /* Adjust the gap to control the space between the text and the picture */
+    gap: 20px;
 }
 
 
-/* Text section */
 .profile-info {
-    max-width: 60%; /* Adjust this as needed to control the width of the text part */
+    max-width: 60%;
 }
 
-/* Profile name and course styling */
+
 .profile-name {
     font-size: 2rem;
     font-weight: bold;
@@ -203,14 +193,14 @@ a:hover {
     color: #666;
 }
 
-/* Description text styling */
+
 .profile-description {
     font-size: 1rem;
     color: #444;
     margin-top: 10px;
 }
 
-/* Button container styling */
+
 .btn-container {
     margin-top: 20px;
 }
@@ -222,7 +212,7 @@ a:hover {
     margin-right: 10px;
 }
 
-/* Social icons styling */
+
 .socials-container {
     margin-top: 20px;
 }
@@ -234,9 +224,8 @@ a:hover {
     cursor: pointer;
 }
 
-/* Picture container */
 .picture-container {
-    max-width: 25%; /* Adjust width of image */
+    max-width: 25%; 
 }
 
 .picture-container img {
@@ -247,56 +236,55 @@ a:hover {
 /*DIVIDER*/ 
 
   .divider {
-    width: 100%; /* Full width of the viewport */
-    overflow: hidden; /* No scrollbars at all */
+    width: 100%; 
+    overflow: hidden; 
   }
   
   .text-with-border {
     display: flex;
     align-items: center;
     justify-content: center;
-    border-top: 2px solid black; /* Top border */
-    border-bottom: 2px solid black; /* Bottom border */
+    border-top: 2px solid black; 
+    border-bottom: 2px solid black;
     padding: 10px 0;
-    background-color: #050a30; /* Optional: Background color for the entire line */
-    flex-wrap: nowrap; /* Prevent wrapping */
+    background-color: #050a30; 
+    flex-wrap: nowrap;
     width: 100%;
-    box-sizing: border-box; /* Ensure padding doesn't push content outside */
+    box-sizing: border-box; 
   }
   
   .text-item {
     display: inline-flex;
-    color: white; /* White text */
+    color: white; 
     padding: 5px 10px;
-    border-radius: 5px; /* Optional: Rounded corners for each "tile" */
+    border-radius: 5px; 
     margin: 0 10px;
-    font-size: 16px; /* Adjust font size for scaling */
-    white-space: nowrap; /* Prevent text wrapping inside each item */
-    flex-shrink: 1; /* Allow items to shrink if necessary */
+    font-size: 16px; 
+    white-space: nowrap;
+    flex-shrink: 1; 
   }
   
   .separator {
     display: inline-flex;
-    color: white; /* Separator color */
+    color: white;
     padding: 0 5px;
     margin: 0 10px;
-    font-size: 20px; /* Adjust separator size */
+    font-size: 20px; 
   }
 
 /*ABOUT ME*/
 
-/* PAGE */
 .start-about {
-    text-align: center; /* Center the content inside the section */
-    padding: 50px 20px; /* Add some padding to space things out */
+    text-align: center; 
+    padding: 50px 20px; 
 }
 
 /*TECHNOLOGIES TEXT */
 .techtext {
     text-decoration: underline;
-    text-underline-offset: 10px; /* Add space between the text and the underline */
-    font-size: 30px; /* Make the text a bit smaller */
-    margin-bottom: 20px; /* Space between title and paragraph */
+    text-underline-offset: 10px; 
+    font-size: 30px; 
+    margin-bottom: 20px; 
 }
 
 .technologies p {
@@ -307,45 +295,44 @@ a:hover {
 /* CONTAINER TECHNOLOGIES IMAGES */
 .tech-images {
     display: flex;
-    justify-content: center; /* Align items horizontally */
-    flex-wrap: wrap; /* Allow wrapping when needed */
-    gap: 20px; /* Space between items */
-}
+    justify-content: center; 
+    flex-wrap: wrap; 
+    gap: 20px; 
 
 /* TECHNOLOGIES IMAGES */
 .tech-item {
-    text-align: center; /* Center text under each image */
-    max-width: 120px; /* Limit the width of each image and caption block */
+    text-align: center; 
+    max-width: 120px; 
 }
 
 .tech-item img {
-    width: 100px; /* Make the images smaller */
-    height: 100px; /* Make the images square */
-    object-fit: cover; /* Ensure images maintain aspect ratio */
-    margin-bottom: 10px; /* Space between image and caption */
+    width: 100px; 
+    height: 100px; 
+    object-fit: cover; 
+    margin-bottom: 10px; 
 }
 
 /* TECHNOLOGIES IMAGE CAPTION*/
 .tech-item p {
-    font-size: 12px; /* Smaller font for captions */
+    font-size: 12px; 
     margin: 0;
 }
 
 /*EDUCATION AND SKILLS*/
 .eandp {
     display: flex;
-    text-align: center; /* Center the content inside the section */
+    text-align: center; 
     align-items: center;
     justify-content: space-around;
-    padding: 50px 20px; /* Add some padding to space things out */ 
+    padding: 50px 20px; 
 }
 
 /* EDUCATION */
 .eductext {
     text-decoration: underline;
-    text-underline-offset: 10px; /* Add space between the text and the underline */
-    font-size: 30px; /* Make the text a bit smaller */
-    margin-bottom: 20px; /* Space between title and paragraph */
+    text-underline-offset: 10px; 
+    font-size: 30px; 
+    margin-bottom: 20px; 
 }
 
 /* EDUCATION IMAGE */
@@ -358,56 +345,56 @@ a:hover {
 }
 
 .educpic {
-    width: 100px; /* Make the images smaller */
-    height: 100px; /* Make the images square */
-    object-fit: cover; /* Ensure images maintain aspect ratio */
-    margin-bottom: 10px; /* Space between image and caption */
+    width: 100px; 
+    height: 100px; 
+    object-fit: cover;
+    margin-bottom: 10px; 
 }
 
 /*SKILLS*/
 .s-text {
     text-decoration: underline;
-    text-underline-offset: 10px; /* Add space between the text and the underline */
-    font-size: 30px; /* Make the text a bit smaller */
-    margin-bottom: 20px; /* Space between title and paragraph */
+    text-underline-offset: 10px; 
+    font-size: 30px; 
+    margin-bottom: 20px; 
 }
 
 /* SKILLS IMAGES */
 .skillphoto {
     display: flex;
-    justify-content: center; /* Align items horizontally */
-    flex-wrap: wrap; /* Allow wrapping when needed */
-    gap: 20px; /* Space between items */
+    justify-content: center;
+    flex-wrap: wrap; 
+    gap: 20px; 
 }
 
 .skillimage {
-    text-align: center; /* Center text under each image */
-    max-width: 180px; /* Limit the width of each image and caption block */
+    text-align: center; 
+    max-width: 180px; 
 }
 
 .skillimage img {
-    width: 150px; /* Make the images smaller */
-    height: 150px; /* Make the images square */
-    object-fit: cover; /* Ensure images maintain aspect ratio */
-    margin-bottom: 10px; /* Space between image and caption */
+    width: 150px; 
+    height: 150px; 
+    object-fit: cover; 
+    margin-bottom: 10px; 
 }
 
 .skillimage p {
-    font-size: 15px; /* Smaller font for captions */
+    font-size: 15px; 
     margin: 0;
 }
 
 /* PROJECT TEXT */
 #projects {
-    text-align: center; /* Center the content inside the section */
-    padding: 50px 20px; /* Add some padding to space things out */
+    text-align: center; 
+    padding: 50px 20px; 
 }
 
 .protext {
     text-decoration: underline;
-    text-underline-offset: 10px; /* Add space between the text and the underline */
-    font-size: 30px; /* Make the text a bit smaller */
-    margin-bottom: 20px; /* Space between title and paragraph */
+    text-underline-offset: 10px;
+    font-size: 30px; 
+    margin-bottom: 20px;
 }
 
 .prodesc {
@@ -416,47 +403,47 @@ a:hover {
 
 .allpro {
     display: flex;
-    justify-content: space-evenly; /* Space between the boxes */
-    gap: 10px; /* Adds space between the individual project boxes */
-    flex-wrap: wrap; /* Allow wrapping of items when screen size is smaller */
+    justify-content: space-evenly; 
+    gap: 10px; 
+    flex-wrap: wrap; 
     padding-left: 20px;
     padding-right: 20px;
 }
 
-/* Project Box Styling (Common for all) */
+
 .firstpro, .secondpro, .thirdpro, .fourthpro {
-    border: 2px solid #000; /* Black border */
-    padding: 15px;           /* Add some padding inside the box */
-    margin: 10px 0;          /* Space outside the box */
-    border-radius: 10px;     /* Rounded corners */
-    background-color: #f9f9f9; /* Light background color */
-    width: 280px;            /* Default width for the project boxes */
+    border: 2px solid #000; 
+    padding: 15px;          
+    margin: 10px 0;          
+    border-radius: 10px;    
+    background-color: #f9f9f9; 
+    width: 280px;            
     text-align: center;
-    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Optional transition for hover effect */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; 
 }
 
 .firstpro img, .secondpro img, .thirdpro img, .fourthpro img {
-    width: 100%;             /* Make image responsive */
+    width: 100%;           
     height: auto;
-    border-bottom: 2px solid #ddd; /* Bottom border on image */
-    margin-bottom: 10px;      /* Space between image and text */
+    border-bottom: 2px solid #ddd;
+    margin-bottom: 10px;    
 }
 
 .firstpro h4, .secondpro h4, .thirdpro h4, .fourthpro h4 {
     padding: 5px;
-    font-size: 1.2rem;        /* Slightly smaller font size for titles */
+    font-size: 1.2rem;    
 }
 
 .firstpro p, .secondpro p, .thirdpro p, .fourthpro p {
     font-size: 1rem;
 }
-/* Container Styling for Buttons */
+
 .probtn, .secondprobtn, .thirdprobtn, .fourthprobtn {
     text-align: center;
-    margin-top: 15px; /* Space between text and buttons */
+    margin-top: 15px; 
 }
 
-/* Consistent Button Styles */
+
 .probtn button, .secondprobtn button, .thirdprobtn button, .fourthprobtn button {
     padding: 0.6rem 1.2rem;
     margin: 0.3rem;
@@ -467,7 +454,7 @@ a:hover {
     transition: background-color 0.3s ease;
 }
 
-/* Button Colors - Blue for Code and Green for View */
+
 .probtnone, .secondprobtnone, .thirdprobtnone, .fourthprobtnone {
     background-color: #0f21aa;
     color: white;
@@ -492,15 +479,15 @@ a:hover {
 /* CONTACT ME */
 #contacts {
     display: flex;
-    flex-direction: column; /* Stack items vertically */
-    justify-content: center;  /* Center horizontally */
-    align-items: center;      /* Center vertically */    
-    text-align: center;       /* Center text */
+    flex-direction: column; 
+    justify-content: center;
+    align-items: center;       
+    text-align: center;    
     padding: 50px 20px;
 }
 
 .contextme {
-    margin-bottom: 20px;      /* Space between text and form */
+    margin-bottom: 20px;    
 }
 
 .conh4 {
@@ -508,9 +495,9 @@ a:hover {
     font-weight: bold;
     color: #050a30;
     text-decoration: underline;
-    text-underline-offset: 10px; /* Add space between the text and the underline */
-    font-size: 30px; /* Make the text a bit smaller */
-    margin-bottom: 20px; /* Space between title and paragraph */
+    text-underline-offset: 10px; 
+    font-size: 30px; 
+    margin-bottom: 20px; 
 }
 
 #conform {
@@ -579,56 +566,56 @@ textarea.messagearea {
 
 /*CONTACTS DOWN*/
 .conbox{
-    border: 2px solid #000;  /* Black border */
-    padding: 15px;           /* Add some padding inside the box */
-    margin: 10px 0;          /* Space outside the box */
-    border-radius: 50px;     /* Rounded corners */
-    background-color: #f9f9f9; /* Light background color */
-    width: 90%;             /* Ensure the border spans the full width of its container */
-    box-sizing: border-box;  /* Include padding and border in width calculation */
-    text-align: center;      /* Center text inside */
-    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Optional transition for hover effect */
+    border: 2px solid #000;  
+    padding: 15px;          
+    margin: 10px 0;         
+    border-radius: 50px;    
+    background-color: #f9f9f9;
+    width: 90%;            
+    box-sizing: border-box;  
+    text-align: center;     
+    transition: transform 0.3s ease, box-shadow 0.3s ease; 
 }
 
 .infophoto {
     display: flex;
-    flex-direction: column;  /* Stack the items vertically */
-    align-items: center;     /* Center the items horizontally */
-    text-align: left;        /* Align text to the left */
+    flex-direction: column; 
+    align-items: center;     
+    text-align: left;       
 }
 
 .info-img {
     display: flex;
-    align-items: center;  /* Align items in the center vertically */
-    margin-bottom: 10px;   /* Add space between each contact info */
+    align-items: center; 
+    margin-bottom: 10px;  
 }
 
 .info-img img {
-    width: 20px;          /* Make the image smaller */
-    height: 20px;         /* Optional, adjust to maintain aspect ratio */
-    margin-right: 5px;   /* Add space between image and text */
+    width: 20px;         
+    height: 20px;        
+    margin-right: 5px;  
     
 }
 
 .emailinfo {
-    font-size: 15px;        /* Adjust the font size as needed */
-    display: flex;          /* Enable flexbox */
-    justify-content: center; /* Horizontally center the text */
-    align-items: center;     /* Vertically center the text */
-    text-align: center;      /* Ensure text inside the p tag is centered */
-    width: 100%;             /* Ensure it takes full width of the container */
+    font-size: 15px;       
+    display: flex;          
+    justify-content: center; 
+    align-items: center;   
+    text-align: center;    
+    width: 100%;           
 }
 
 
 .emailinfo a {
-    color: inherit;      /* Keep the same color as text */
-    text-decoration: none; /* Remove underline from links */
+    color: inherit;     
+    text-decoration: none; 
 }
 
 .contactinfo {
     font-size: 24px;
     font-weight: bold;
-    margin-bottom: 20px; /* Space above the "CONTACTS" title */
+    margin-bottom: 20px;
 }
 
 /* FOOTER */
@@ -636,8 +623,8 @@ textarea.messagearea {
     color: white;
     background-color: #050a30;
     padding: 30px 20px;
-    justify-content: center; /* Horizontally center the text */
-    align-items: center;     /* Vertically center the text */
-    text-align: center;      /* Ensure text inside the p tag is centered */
+    justify-content: center;
+    align-items: center;     
+    text-align: center;    
 }
-
+}

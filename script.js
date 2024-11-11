@@ -6,9 +6,9 @@ function toggleMenu(){
 }
 
 function sendMail(event) {
-    event.preventDefault(); // Prevent form from submitting
+    event.preventDefault(); 
 
-    // Get form values
+
     let name = document.getElementById("name").value;
     let email = document.getElementById("email").value;
     let message = document.getElementById("message").value;
@@ -29,32 +29,27 @@ function sendMail(event) {
         return;
     }
 
-    // Collect valid form data
     let params = {
         name: name,
         email: email,
         message: message,
     };
 
-    // Send email using emailjs
     emailjs.send("service_y398wxu", "template_ks56j6l", params)
         .then(function(response) {
             console.log("Email Sent:", response);
 
-            // Hide the form and display the Thank You message
-            document.getElementById("conform").style.display = "none"; // Hide the form
-            document.getElementById("thank-you-message").style.display = "block"; // Show the Thank You message
+            document.getElementById("conform").style.display = "none"; 
+            document.getElementById("thank-you-message").style.display = "block"; 
         }, function(error) {
             console.log("Error sending email: ", error);
         });
 }
 
 function showForm() {
-    // Hide the Thank You message and show the form
-    document.getElementById("thank-you-message").style.display = "none"; // Hide the Thank You message
-    document.getElementById("conform").style.display = "block"; // Show the form again
-    
-    // Reset the form fields
+
+    document.getElementById("thank-you-message").style.display = "none"; 
+    document.getElementById("conform").style.display = "block"; 
     document.getElementById("conform").reset();
 }
 
