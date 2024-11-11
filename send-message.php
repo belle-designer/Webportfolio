@@ -1,12 +1,13 @@
 <?php
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    // Collect and sanitize form data
+    // Handle form submission
     $name = htmlspecialchars($_POST['name']);
-    $email = htmlspecialchars($_POST['email']);
-    $message = htmlspecialchars($_POST['message']);
+    $email = filter_var($_POST['email'], FILTER_SANITIZE_EMAIL);
+    $message = nl2br(htmlspecialchars($_POST['message']));  // Convert line breaks to <br>
 
     // Check if any required fields are empty
     if (empty($name) || empty($email) || empty($message)) {
+        // Error: Missing fields
         echo "<script>document.getElementById('error-message').innerText = 'All fields are required.'; document.getElementById('error-message').style.display = 'block';</script>";
     } else {
         // Your email address (where you receive the messages)
@@ -64,7 +65,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 if (mail($email, $reply_subject, $reply_body, $reply_headers)) {
                     // Redirect to thank-you page after successful submission
                     header("Location: thank-you.php");
-                    exit(); // Exit to ensure no further code is executed
+                    exit(); // Ensure no further code is executed
                 } else {
                     echo "<script>document.getElementById('error-message').innerText = 'Failed to send confirmation email. Please try again later.'; document.getElementById('error-message').style.display = 'block';</script>";
                 }

@@ -310,7 +310,7 @@
 <section id="contacts">
     <div class="contextme">CONTACT ME :></div>
     <div class="conemail">
-        <form id="conform" action="send-message.php" method="POST">
+        <form id="conform" action="send-message.php" method="POST" onsubmit="return validateForm()">
             <label for="name" class="namelabel">Name (Required):</label>
             <input type="text" id="name" name="name" required class="textinput">
       
