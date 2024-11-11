@@ -310,7 +310,7 @@
 <section id="contacts">
     <div class="contextme">CONTACT ME :></div>
     <div class="conemail">
-        <form id="conform" action="send-message.php" method="POST" onsubmit="return validateForm()">
+        <form id="conform" action="send-message.php" method="POST">
             <label for="name" class="namelabel">Name (Required):</label>
             <input type="text" id="name" name="name" required class="textinput">
       
@@ -322,18 +322,9 @@
       
             <button type="submit" class="submit-button">Send Message</button>
         </form>
-
-        <!-- Error message -->
-        <div id="error-message" class="error" style="display: none;"></div>
-
-        <!-- Thank you message (hidden initially) -->
-        <div id="thank-you-message" style="display: none;">
-            <h1>Thank you for your message!</h1>
-            <p>Your message has been successfully sent. We will get back to you as soon as possible.</p>
-            <button onclick="window.location.reload();">Refresh Page</button>
-        </div>
     </div>
 </section>
+
 
 
 <script src="script.js"></script>
