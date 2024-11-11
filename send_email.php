@@ -1,40 +1,51 @@
 <?php
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    // Sanitize form inputs to prevent XSS and ensure valid data
-    $name = htmlspecialchars($_POST['name']);
-    $email = htmlspecialchars($_POST['email']);
-    $message = htmlspecialchars($_POST['message']);
+// Sanitize and get form data
+$name = htmlspecialchars(trim($_POST["name"]));
+$email = htmlspecialchars(trim($_POST["email"]));
+$message = htmlspecialchars(trim($_POST["message"]));
 
-    // Server-side validation (basic)
-    if (empty($name) || empty($email) || empty($message)) {
-        echo "All fields are required!";
-        exit;
-    }
+// Your email address (where you want to receive the form submissions)
+$to = "yourname@example.com";  // Replace with your actual email address
 
-    // Validate email format
-    if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
-        echo "Invalid email format!";
-        exit;
-    }
+// Email subject for the message sent to you
+$subject_for_you = "New Contact Form Submission from $name";
 
-    // Set up the email details
-    $to = "bc.ricamauy.zaldivia@cvsu.edu.ph";  // Replace with your email address
-    $subject = "New Contact Form Submission from: $name";
-    $headers = "From: $email\r\n";
-    $headers .= "Reply-To: $email\r\n";
-    $headers .= "Content-Type: text/plain; charset=UTF-8\r\n";  // Ensure proper character encoding
+// Message body for the email sent to you (the website owner)
+$body_for_you = "You have received a new message from the contact form on your website.\n\n".
+                "Name: $name\n".
+                "Email: $email\n".
+                "Message:\n$message\n";
 
-    // Compose the email body
-    $body = "You have received a new message from your contact form:\n\n";
-    $body .= "Name: $name\n";
-    $body .= "Email: $email\n\n";
-    $body .= "Message:\n$message";
+// Email headers for the message sent to you
+$headers_for_you = "From: $email" . "\r\n" .
+                   "Reply-To: $email" . "\r\n" .
+                   "X-Mailer: PHP/" . phpversion();
 
-    // Send the email using PHP mail function
-    if (mail($to, $subject, $body, $headers)) {
-        echo "Message sent successfully!";
+// Send the email to you (website owner)
+if (mail($to, $subject_for_you, $body_for_you, $headers_for_you)) {
+    // Send a confirmation email to the user (the one who submitted the form)
+
+    // Email subject for the confirmation email sent to the user
+    $subject_for_user = "Thank you for contacting us, $name!";
+
+    // Message body for the email sent to the user
+    $body_for_user = "Hi $name,\n\n".
+                     "Thank you for reaching out to us. We have received your message and will get back to you shortly.\n\n".
+                     "Here is a copy of your message:\n$message\n\n".
+                     "Best regards,\nYour Website Team";
+
+    // Email headers for the confirmation email sent to the user
+    $headers_for_user = "From: yourname@example.com" . "\r\n" .  // Replace with your email address
+                        "Reply-To: yourname@example.com" . "\r\n" .
+                        "X-Mailer: PHP/" . phpversion();
+
+    // Send the confirmation email to the user
+    if (mail($email, $subject_for_user, $body_for_user, $headers_for_user)) {
+        echo "Thank you for your message! We will get back to you shortly.";
     } else {
-        echo "Sorry, there was an error sending your message.";
+        echo "We encountered an issue while sending the confirmation email. Please try again later.";
     }
+} else {
+    echo "Oops! Something went wrong and we couldn't send your message. Please try again later.";
 }
 ?>

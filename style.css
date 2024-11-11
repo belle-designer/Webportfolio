@@ -223,7 +223,7 @@ a:hover {
 }
 
 /* Social icons styling */
-#socials-container {
+.socials-container {
     margin-top: 20px;
 }
 
@@ -398,7 +398,7 @@ a:hover {
 }
 
 /* PROJECT TEXT */
-#project {
+#projects {
     text-align: center; /* Center the content inside the section */
     padding: 50px 20px; /* Add some padding to space things out */
 }
@@ -468,28 +468,53 @@ a:hover {
 }
 
 /* Button Colors - Blue for Code and Green for View */
-.probtnone, .secondprobtnone, .thirdprobtnone,.fourthprobtnone {
-    background-color: #007bff; /* Blue */
+.probtnone, .secondprobtnone, .thirdprobtnone, .fourthprobtnone {
+    background-color: #0f21aa;
+    color: white;
+}
+
+.probtnone:hover, .secondprobtnone:hover, .thirdprobtnone:hover, .fourthprobtnone:hover {
+    background-color: rgb(57, 78, 235);
     color: white;
 }
 
 .probtntwo, .secondprobtntwo, .thirdprobtntwo {
-    background-color: #28a745; /* Green */
+    background-color: #a10707;
     color: white;
 }
 
-/* Hover Effects for All Buttons */
-.probtn button:hover, .secondprobtn button:hover, .thirdprobtn button:hover, .fourthprobtn button:hover {
-    opacity: 0.8;
+.probtntwo:hover, .secondprobtntwo:hover, .thirdprobtntwo:hover {
+    background-color: rgb(224, 68, 68);
+    color: white;
 }
 
+
 /* CONTACT ME */
+#contacts {
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+    justify-content: center;  /* Center horizontally */
+    align-items: center;      /* Center vertically */    
+    text-align: center;       /* Center text */
+    padding: 50px 20px;
+}
+
 .contextme {
+    margin-bottom: 20px;      /* Space between text and form */
+}
+
+.conh4 {
     font-size: 24px;
     font-weight: bold;
-    color: #333;
-    text-align: center;
-    margin-bottom: 20px;
+    color: #050a30;
+    text-decoration: underline;
+    text-underline-offset: 10px; /* Add space between the text and the underline */
+    font-size: 30px; /* Make the text a bit smaller */
+    margin-bottom: 20px; /* Space between title and paragraph */
+}
+
+#conform {
+    padding-bottom: 50px;
 }
 
 .conemail {
@@ -513,6 +538,7 @@ label {
     border: 1px solid #ddd;
     border-radius: 4px;
     margin-bottom: 15px;
+    font-family: "Poppins", sans-serif;
 }
 
 .textinput:focus,
@@ -520,6 +546,7 @@ label {
 .messagearea:focus {
     border-color: #007BFF;
     outline: none;
+    font-family: "Poppins", sans-serif;
 }
 
 textarea.messagearea {
@@ -531,7 +558,7 @@ textarea.messagearea {
     width: 100%;
     padding: 12px;
     font-size: 16px;
-    background-color: #007BFF;
+    background-color: #050a30;
     color: white;
     border: none;
     border-radius: 4px;
@@ -540,7 +567,7 @@ textarea.messagearea {
 }
 
 .submit-button:hover {
-    background-color: #0056b3;
+    background-color: rgb(31, 45, 156);
 }
 
 .error {
@@ -549,3 +576,68 @@ textarea.messagearea {
     margin-top: 10px;
     display: none;
 }
+
+/*CONTACTS DOWN*/
+.conbox{
+    border: 2px solid #000;  /* Black border */
+    padding: 15px;           /* Add some padding inside the box */
+    margin: 10px 0;          /* Space outside the box */
+    border-radius: 50px;     /* Rounded corners */
+    background-color: #f9f9f9; /* Light background color */
+    width: 90%;             /* Ensure the border spans the full width of its container */
+    box-sizing: border-box;  /* Include padding and border in width calculation */
+    text-align: center;      /* Center text inside */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Optional transition for hover effect */
+}
+
+.infophoto {
+    display: flex;
+    flex-direction: column;  /* Stack the items vertically */
+    align-items: center;     /* Center the items horizontally */
+    text-align: left;        /* Align text to the left */
+}
+
+.info-img {
+    display: flex;
+    align-items: center;  /* Align items in the center vertically */
+    margin-bottom: 10px;   /* Add space between each contact info */
+}
+
+.info-img img {
+    width: 20px;          /* Make the image smaller */
+    height: 20px;         /* Optional, adjust to maintain aspect ratio */
+    margin-right: 5px;   /* Add space between image and text */
+    
+}
+
+.emailinfo {
+    font-size: 15px;        /* Adjust the font size as needed */
+    display: flex;          /* Enable flexbox */
+    justify-content: center; /* Horizontally center the text */
+    align-items: center;     /* Vertically center the text */
+    text-align: center;      /* Ensure text inside the p tag is centered */
+    width: 100%;             /* Ensure it takes full width of the container */
+}
+
+
+.emailinfo a {
+    color: inherit;      /* Keep the same color as text */
+    text-decoration: none; /* Remove underline from links */
+}
+
+.contactinfo {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px; /* Space above the "CONTACTS" title */
+}
+
+/* FOOTER */
+.end{
+    color: white;
+    background-color: #050a30;
+    padding: 30px 20px;
+    justify-content: center; /* Horizontally center the text */
+    align-items: center;     /* Vertically center the text */
+    text-align: center;      /* Ensure text inside the p tag is centered */
+}
+

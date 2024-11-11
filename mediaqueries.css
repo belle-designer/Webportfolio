@@ -7,3 +7,295 @@
         display: flex;
     }
 }
+
+@media screen and (max-width: 876px) {
+
+/* PROFILE */
+    #profile {
+        display: flex;
+        flex-direction:column-reverse;
+        justify-content: center; /* Center content vertically */
+        align-items: center;     /* Center content horizontally */
+        padding: 50px;
+        height: 60vh; /* Make the section take full viewport height */
+        text-align: center; /* Center text */
+    }
+
+    .profile-info {
+        padding-bottom: 30px;
+    }
+
+    .profile-name {
+        font-size: 1.3rem; /* Smaller font size */
+
+    }
+
+    .profile-course {
+        font-size: 0.6rem; /* Smaller font size */
+    }
+
+    .profiletext {
+        font-size: 0.7rem; /* Smaller font size */
+        text-align: center;
+        padding-top: 20px, 5px;
+    }
+
+    .btn-container {
+        display: flex;
+        flex-direction: row; /* Align buttons horizontally */
+        justify-content: center; /* Center buttons */
+        gap: 10px; /* Space between buttons */
+        width: 100%;
+        margin-top: 20px;
+    }
+
+    .btn {
+        padding: 5px 15px;  /* Reduced padding for smaller buttons */
+        font-size: 0.8em;    /* Smaller font size */
+        background-color: #050a30;
+        color: white;
+        border: none;
+        border-radius: 50px;
+        cursor: pointer;
+        width: auto; /* Adjust width based on content */
+        text-align: center;
+    }
+
+    /* Social Icons */
+    .socials-container {
+        display: flex;
+        justify-content: center;
+        margin-top: 30px; /* Space between buttons and social icons */
+    }
+
+    .icon {
+        width: 20px;    /* Smaller icon size */
+        height: 20px;   /* Smaller icon size */
+        margin: 0 10px; /* Add space between each icon */
+    }
+
+    .picture-container {
+        display: flex;
+        justify-content: center;  /* Center the content horizontally */
+        align-items: center;      /* Center the content vertically (if needed) */
+        width: 100%;              /* Take up the full width of the container */
+    }
+
+    .picture-container img {
+        width: 180px;    /* Adjust profile photo size */
+        height: 180px;   /* Adjust profile photo size */
+        margin-top: 15px; /* Adds space between social icons and profile photo */
+        margin-bottom: 20px; /* Space below the profile photo */
+        border-radius: 50%; /* Optional: Make the photo circular */
+    }
+
+}
+
+@media screen and (max-width: 876px) {
+    .text-with-border {
+        font-size: 0.6em; /* Slightly smaller text on medium screens */
+        gap: 3px; /* Reduce gap between items and separators */
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .text-with-border {
+        font-size: 0.5em; /* Reduce font size further for mobile */
+        gap: 6px; /* Even smaller gap for mobile screens */
+    }
+
+    .separator {
+        font-size: 1em; /* Slightly smaller separator on mobile */
+    }
+}
+
+/* ABOUT ME */
+/* Media Query for screens up to 876px */
+@media screen and (max-width: 876px) {
+
+    .techtext {
+        font-size: 1.8em; /* Slightly smaller font size */
+    }
+
+    .tech-images {
+        grid-template-columns: repeat(3, 1fr); /* 3 columns on smaller screens */
+    }
+
+    .tech-item img {
+        width: 50px; /* Adjust image size */
+    }
+
+    .tech-item p {
+        font-size: 1em; /* Adjust text size for better readability */
+    }
+}
+
+@media screen and (max-width: 600px) {
+
+    .tech-images {
+        grid-template-columns: repeat(2, 1fr); /* 2 columns for very small screens */
+    }
+
+    .tech-item img {
+        width: 35px; /* Smaller image size */
+        height: 35px;
+    }
+
+    .techtext {
+        font-size: 1.3em; /* Further decrease font size */
+    }
+
+    .techtext p {
+        font-size: 0.9em; /* Further decrease font size */
+    }
+
+    .tech-item p {
+        font-size: 0.8em; /* Adjust text size for readability */
+    }
+}
+
+@media screen and (max-width: 600px) {
+
+    .eandp {
+        padding: 10px;
+        flex-direction: column;
+    }
+
+    .skillphoto {
+        grid-template-columns: repeat(2, 1fr); /* 2 columns for very small screens */
+        justify-content: space-evenly;
+        align-items: center;
+    }
+
+    .skillimage img {
+        width: 30px; /* Smaller image size */
+        height: 30px;
+    }
+
+    .eductext {
+        font-size: 1.5em; /* Further decrease font size */
+        margin-top: 20px;
+    }
+
+    .educpic {
+        width: 30px; /* Smaller image size */
+        height: 30px; /* Smaller image size */
+    }
+
+    .educ, .educdesc {
+        font-size: 0.8em; /* Adjust text size for better readability*/
+        padding: 1px;
+    }
+
+    .s-text {
+        font-size: 1.5em; /* Smaller text for the Skills section */
+        margin-top: 20px;
+    }
+
+    .skillimage p {
+        font-size: 0.9em; /* Adjust text size */
+    }
+}
+
+@media screen and (max-width: 876px) {
+    .protext {
+        font-size: 2em;
+    }
+
+    .prodesc {
+        font-size: 1.1em;
+    }
+
+    .allpro {
+        grid-template-columns: repeat(2, 1fr); /* 2 columns for medium screens */
+    }
+}
+
+/* Small Screens (up to 600px) */
+@media screen and (max-width: 600px) {
+    .protext {
+        font-size: 1.6em; /* Smaller font size */
+    }
+
+    .prodesc {
+        font-size: 0.8em;
+    }
+
+    .allpro {
+        grid-template-columns: 1fr; /* Single column on small screens */
+    }
+
+    .allpro div {
+        padding: 15px; /* Adjust padding for smaller screens */
+    }
+
+    button {
+        font-size: 0.9em;
+        padding: 8px 15px; /* Smaller buttons for mobile */
+    }
+}
+
+@media screen and (max-width: 876px) {
+
+
+    .conh4 {
+        font-size: 2em; /* Slightly smaller font size */
+    }
+
+    .form-container {
+        padding: 0 10px; /* Add padding to form for smaller screens */
+    }
+
+    .namelabel, .emaillabel, .messagelabel {
+        font-size: 1em; /* Slightly smaller label font size */
+    }
+
+    .textinput, .emailinput, .messagearea {
+        width: 90%; /* Make the form fields take up more space on smaller screens */
+        max-width: 100%;
+        font-size: 1em;
+    }
+
+    .submit-button {
+        font-size: 1em; /* Slightly smaller submit button text */
+    }
+
+    #thank-you-message {
+        font-size: 1.1em; /* Slightly smaller thank you message font */
+    }
+
+    .thankbtn {
+        font-size: 1em; /* Slightly smaller thank you button */
+    }
+}
+
+@media screen and (max-width: 600px) {
+
+    .conh4 {
+        font-size: 1.4em; /* Even smaller for very small screens */
+    }
+
+    .form-container {
+        gap: 20px; /* Reduce the gap between the form elements */
+    }
+
+    .textinput, .emailinput, .messagearea {
+        width: 80%; /* Make form fields 100% width on small screens */
+        font-size: 1em;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        
+    }
+
+    .submit-button {
+        font-size: 1em; /* Consistent button size */
+        width: 88%;
+    }
+
+    .thankbtn {
+        font-size: 1em;
+        background-color: #050a30;
+        width: 88%;
+    }
+}

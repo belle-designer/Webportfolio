@@ -10,14 +10,26 @@
 </head>
 <body>
 
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+    </script>
+    <script type="text/javascript">
+   (function(){
+      emailjs.init({
+        publicKey: "tyXBbP0ruZroFjDIp",
+      });
+   })();
+    </script>
+
+<section id="up">
 <!-- DESKTOP NAV -->
     <nav id="desktop-nav">
         <div class="logo">
-            <a href="#profile">rica</a>
+            <a href="#up">rica</a>
         </div>
             <div>
                 <ul class="nav-links">
-                    <li><a href="#profile">Home</a></li>
+                    <li><a href="#up">Home</a></li>
                     <li><a href="#aboutme">About me</a></li>
                     <li><a href="#projects">Projects</a></li>
                     <li><a href="#contacts">Contacts</a></li>
@@ -28,7 +40,7 @@
 <!-- MOBILE NAV -->
     <nav id="mobile-nav">
         <div class="logo">
-            <a href="#profile">rica</a>
+            <a href="#up">rica</a>
         </div>
         <div class="mobile-menu">
             <div class="mobile-icon" onclick="toggleMenu()">
@@ -37,7 +49,7 @@
                 <span></span>
             </div>
             <div class="menu-links">
-                    <li><a href="#profile" onclick="toggleMenu()">Home</a></li>
+                    <li><a href="#up" onclick="toggleMenu()">Home</a></li>
                     <li><a href="#aboutme" onclick="toggleMenu()">About me</a></li>
                     <li><a href="#projects" onclick="toggleMenu()">Project</a></li>
                     <li><a href="#contacts" onclick="toggleMenu()">Contacts</a></li>
@@ -51,19 +63,19 @@
         <!-- TEXT -->
         <div class="profile-info">
             <h1 class="profile-name">RICA MAY I. ZALDIVIA</h1>
-            <h3 class="profile-course">BACHELOR OF SCIENCE IN COPUTER SCIENCE</h3>
-            <p class="profile-info">Lorem ipsum odor amet, consectetuer adipiscing elit.</p>
+            <h3 class="profile-course">BACHELOR OF SCIENCE IN COMPUTER SCIENCE</h3>
+            <p class="profiletext">Lorem ipsum odor amet, consectetuer adipiscing elit.</p>
             
             <!-- BUTTON -->
             <div class="btn-container">
-                <button class="btn btn-color-1" onclick="location.href='#contact'">
+                <button class="btn btn-color-1" onclick="location.href='#contacts'">
                     Contacts
                 </button>
                 <button class="btn btn-color-1" onclick="location.href='#projects'">
-                    Project
+                    Projects
                 </button>
               </div>
-              <div id="socials-container">
+              <div class="socials-container">
                 <img
                   src="./assets/fb.png"
                   alt="My facebook profile"
@@ -101,6 +113,8 @@
             <img src="./assets/rica.jpg" alt="Rica Zaldivia" />
         </div>
     </section>
+
+</section>
 
 <!-- ABOUT ME DIVIDER UP -->
     <section id="aboutme">
@@ -256,7 +270,7 @@
 </section>
 
 <!-- PROJECT -->
-<section id="project">
+<section id="projects">
     <h2 class="protext">MY PROJECT(S)</h2>
     <p class="prodesc">This is my past and on going projects </p>
 
@@ -308,25 +322,59 @@
 
 <!-- CONTACTS -->
 <section id="contacts">
-    <div class="contextme">CONTACT ME :></div>
-    <div class="conemail">
-        <form id="conform" action="send_email.php" method="POST">
-            <label for="name" class="namelabel">Name (Required):</label>
-            <input type="text" id="name" name="name" required class="textinput">
+    <div class="contextme"></div>
+        <h2 class="conh4">CONTACT ME :></h2>
+            <div class="conemail">
+                
+                <div class="form-container">
+                    <form id="conform">
+                        <label for="name" class="namelabel">Name (Required):</label>
+                        <input type="text" id="name" name="name" required class="textinput">
+            
+                        <label for="email" class="emaillabel">Email (Required):</label>
+                        <input type="email" id="email" name="email" required class="emailinput">
+            
+                        <label for="message" class="messagelabel">Message:</label>
+                        <textarea id="message" name="message" required class="messagearea"></textarea>
+            
+                        <button type="button" class="submit-button" onclick="sendMail(event)">Send Message</button>
+                    </form>
+                </div>
+            </div>
+            
+                <!-- Thank You Message (Initially Hidden) -->
+                <div id="thank-you-message" style="display: none;">
+                    <p>Thank you for your message! We will get back to you shortly.</p>
+                    <button onclick="showForm()" class="thankbtn">Submit Another Message</button>
+                </div>                
 
-            <label for="email" class="emaillabel">Email (Required):</label>
-            <input type="email" id="email" name="email" required class="emailinput">
-
-            <label for="message" class="messagelabel">Message:</label>
-            <textarea id="message" name="message" required class="messagearea"></textarea>
-
-            <button type="submit" class="submit-button">Send Message</button>
-        </form>
+            <div class="conbox">
+                <h2 class="contactinfo">CONTACT INFO</h2>
+                    <div class="infophoto">
+                        <div class="info-img">
+                            <img src="./assets/call.png" alt="Number" />
+                            <p class="emailinfo">09459761505<p>
+                        </div>
+                        <div class="info-img">
+                            <img src="./assets/mail.png" alt="Personal" />
+                            <p class="emailinfo"><a href="mailto:ricamayzaldivia@gmail.com">ricamay.zaldivia@cvsu.edu.ph</a><p>
+                        </div>
+                        <div class="info-img">
+                            <img src="./assets/mail.png" alt="School" />
+                            <p class="emailinfo"><a href="mailto:bc.ricamay.zaldivia@cvsu.edu.ph">ricamay.zaldivia@cvsu.edu.ph</a><p>
+                        </div>
+                        <div class="info-img">
+                            <img src="./assets/add.png" alt="Address" />
+                            <p class="emailinfo">Commercial Complex, Anabu 1-A, Imus City, Cavite<p>
+                        </div>
+                    </div>
+            </div>
     </div>
 </section>
 
-
-
+<footer class="end">
+    <p>Copyright &#169; 2024 Rica May Inocencio Zaldivia. All Rights Reserved.</p>
+</footer>
 
 <script src="script.js"></script>
 </body>
