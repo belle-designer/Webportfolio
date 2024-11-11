@@ -298,7 +298,7 @@ a:hover {
     justify-content: center; 
     flex-wrap: wrap; 
     gap: 20px; 
-
+}
 /* TECHNOLOGIES IMAGES */
 .tech-item {
     text-align: center; 
@@ -606,7 +606,6 @@ textarea.messagearea {
     width: 100%;           
 }
 
-
 .emailinfo a {
     color: inherit;     
     text-decoration: none; 
@@ -626,5 +625,4 @@ textarea.messagearea {
     justify-content: center;
     align-items: center;     
     text-align: center;    
-}
 }

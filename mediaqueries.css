@@ -10,7 +10,7 @@
 
 @media screen and (max-width: 876px) {
 
-/* PROFILE */
+PROFILE 
     #profile {
         display: flex;
         flex-direction:column-reverse;
@@ -88,7 +88,7 @@
         border-radius: 50%; 
     }
 
-}
+} 
 
 @media screen and (max-width: 876px) {
     .text-with-border {
@@ -108,7 +108,6 @@
     }
 }
 
-/* ABOUT ME */
 @media screen and (max-width: 876px) {
 
     .techtext {
@@ -296,4 +295,4 @@
         background-color: #050a30;
         width: 88%;
     }
-}
+} 
