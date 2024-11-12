@@ -49,10 +49,10 @@ nav {
     padding: 0 50px; 
 }   
 
-.logo {
-    color: white;
-    align-items: center;
-    size: 1rem;
+.logo img {
+    width: 20%;
+    height: auto;
+    padding-top: 8px;
 }
 
 .logo:hover {
@@ -93,8 +93,8 @@ a:hover {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    height: 24px;
-    width: 30px;
+    height: 18px;
+    width: 24px;
     cursor: pointer;
 }
 
@@ -120,7 +120,7 @@ a:hover {
     display: block;
     padding: 10px;
     text-align: center;
-    font-size: 1rem;
+    font-size: 0.9rem;
     color: white;
     text-decoration: none;
     transition: all 0.3 ease-in-out;
@@ -131,11 +131,12 @@ a:hover {
 }
 
 .menu-links.open {
-    max-height: 300px;
+    max-height: 350px;
+    border-radius: 20px;
 }
 
 .mobile-icon.open span:first-child {
-    transform: rotate(45deg) translate(10px, 5px);
+    transform: rotate(45deg) translate(10px, 1px);
 }
 
 
@@ -144,7 +145,7 @@ a:hover {
 }
 
 .mobile-icon.open span:last-child {
-    transform: rotate(-45deg) translate(10px, -5px);
+    transform: rotate(-45deg) translate(11px, -1px);
 }
 
 .mobile-icon span:first-child {
@@ -160,7 +161,6 @@ a:hover {
 }
 
 /*SECTION*/
-
 #profile {
     display: flex;
     align-items: center; 
@@ -184,20 +184,21 @@ a:hover {
 
 
 .profile-name {
-    font-size: 2rem;
+    font-size: 3.5rem;
     font-weight: bold;
 }
 
 .profile-course {
-    font-size: 1.2rem;
-    color: #666;
+    font-size: 1.5rem;
+    color: black;
 }
 
 
 .profile-description {
-    font-size: 1rem;
-    color: #444;
+    font-size: 1.2rem;
+    color: black;
     margin-top: 10px;
+    margin-bottom: 20px;
 }
 
 
@@ -210,11 +211,21 @@ a:hover {
     font-size: 1rem;
     cursor: pointer;
     margin-right: 10px;
+    background-color: #050a30;
+    color: white;
+    border-radius: 50px;
+    border: 2px solid #050a30;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
 }
 
+.btn:hover {
+    background-color: transparent;
+    color: #050a30;
+    box-shadow: 0 0 8px 3px rgba(5, 10, 48, 0.6);
+}
 
 .socials-container {
-    margin-top: 20px;
+    margin-top: 30px;
 }
 
 .icon {
@@ -225,13 +236,25 @@ a:hover {
 }
 
 .picture-container {
-    max-width: 25%; 
+    max-width: 25%;
+    display: inline-block;
+    padding: 5px;
+    border-radius: 50%;
+    box-shadow: 0 0 30px #050a30; 
 }
 
 .picture-container img {
     width: 100%;
     border-radius: 50%;
+    display: block;
+    transition: box-shadow 0.3s ease;
 }
+
+.picture-container:hover {
+    box-shadow: 0 0 50px #050a30; 
+}
+
+
 
 /*DIVIDER*/ 
 
@@ -244,8 +267,8 @@ a:hover {
     display: flex;
     align-items: center;
     justify-content: center;
-    border-top: 2px solid black; 
-    border-bottom: 2px solid black;
+    border-top: 2px solid white; 
+    border-bottom: 2px solid white;
     padding: 10px 0;
     background-color: #050a30; 
     flex-wrap: nowrap;
@@ -277,6 +300,8 @@ a:hover {
 .start-about {
     text-align: center; 
     padding: 50px 20px; 
+    background-color: #050a30;
+    color: white;
 }
 
 /*TECHNOLOGIES TEXT */
@@ -345,10 +370,10 @@ a:hover {
 }
 
 .educpic {
-    width: 100px; 
-    height: 100px; 
+    width: 400px; 
+    height: 250px; 
     object-fit: cover;
-    margin-bottom: 10px; 
+    margin-bottom: 10px;
 }
 
 /*SKILLS*/
@@ -411,6 +436,13 @@ a:hover {
 }
 
 
+.firstpro img, .secondpro img, .thirdpro img, .fourthpro img {
+    width: 100%;           
+    height: auto;
+    border-bottom: 2px solid #ddd;
+    margin-bottom: 10px;    
+}
+
 .firstpro, .secondpro, .thirdpro, .fourthpro {
     border: 2px solid #000; 
     padding: 15px;          
@@ -422,12 +454,11 @@ a:hover {
     transition: transform 0.3s ease, box-shadow 0.3s ease; 
 }
 
-.firstpro img, .secondpro img, .thirdpro img, .fourthpro img {
-    width: 100%;           
-    height: auto;
-    border-bottom: 2px solid #ddd;
-    margin-bottom: 10px;    
+.firstpro:hover, .secondpro:hover, .thirdpro:hover, .fourthpro:hover {
+    box-shadow: 0 0 20px 5px rgba(5, 10, 48, 1); 
+    transform: translateY(-5px); 
 }
+
 
 .firstpro h4, .secondpro h4, .thirdpro h4, .fourthpro h4 {
     padding: 5px;
@@ -475,15 +506,73 @@ a:hover {
     color: white;
 }
 
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.8);
+}
 
-/* CONTACT ME */
+.modal-content {
+    display: block;
+    margin: auto;
+    max-width: 100%;
+    max-height: 90vh;
+    width: auto;
+    height: auto;
+}
+
+.close {
+    color: white;
+    font-size: 30px;
+    font-weight: bold;
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    cursor: pointer;
+    z-index: 2;
+}
+
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+    background-color: rgba(0, 0, 0, 0.6);
+    border: none;
+    cursor: pointer;
+    padding: 16px;
+    transition: 0.3s;
+    z-index: 2;
+}
+
+.prev {
+    left: 0;
+}
+
+.next {
+    right: 0;
+}
+
+.prev:hover, .next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* CONTACTS */
 #contacts {
     display: flex;
-    flex-direction: column; 
+    flex-direction: column;
     justify-content: center;
     align-items: center;       
-    text-align: center;    
-    padding: 50px 20px;
+    text-align: center;   
+    padding: 30px 20px;
+    background-color: #050a30;
 }
 
 .contextme {
@@ -491,13 +580,13 @@ a:hover {
 }
 
 .conh4 {
-    font-size: 24px;
+    font-size: 30px;
     font-weight: bold;
     color: #050a30;
     text-decoration: underline;
     text-underline-offset: 10px; 
-    font-size: 30px; 
     margin-bottom: 20px; 
+    color: white;
 }
 
 #conform {
@@ -506,12 +595,13 @@ a:hover {
 
 .conemail {
     max-width: 600px;
+    width: 100%;
     margin: 0 auto;
 }
 
 label {
     font-size: 14px;
-    color: #333;
+    color: white;
     margin: 10px 0 5px;
     display: block;
 }
@@ -542,20 +632,56 @@ textarea.messagearea {
 }
 
 .submit-button {
-    width: 100%;
+    width: 200px;
     padding: 12px;
     font-size: 16px;
-    background-color: #050a30;
-    color: white;
+    background-color: white;
     border: none;
-    border-radius: 4px;
+    border-radius: 20px;
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    margin: 0 auto;
+    display: block;
 }
 
 .submit-button:hover {
     background-color: rgb(31, 45, 156);
+    color: white;
+    box-shadow: 0 0 15px 5px rgba(255, 255, 255, 1); 
 }
+
+.thankbtn {
+    width: 300px;
+    padding: 15px;
+    font-size: 16px;
+    background-color: white;
+    color: #050a30;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    margin: 0 auto;
+    display: block;
+    height: auto;
+}
+
+.thankbtn:hover {
+    background-color: #050a30;
+    color: white; 
+    box-shadow: 0 0 10px 3px rgba(255, 255, 255, 0.8);
+}
+
+.thanktext {
+    padding-top: 10px;
+    padding-bottom: 20px;
+}
+
+#thank-you-message {
+    padding-bottom: 30%;
+    color: white;
+}
+
+
 
 .error {
     color: red;
@@ -563,6 +689,56 @@ textarea.messagearea {
     margin-top: 10px;
     display: none;
 }
+
+/* ALERT */
+.alert-modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+}
+
+.alert-content {
+    background-color: #f8d7da;
+    border: 1px solid #f5c6cb;
+    padding: 20px;
+    border-radius: 5px;
+    text-align: center;
+    width: 300px;
+    position: relative;
+}
+
+.alert-icon {
+    font-size: 50px;
+    color: #721c24;
+    margin-bottom: 10px;
+}
+
+.alert-content p {
+    color: #721c24;
+    font-size: 16px;
+    margin-bottom: 15px;
+}
+
+.alert-content button {
+    padding: 8px 16px;
+    background-color: #721c24;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.alert-content button:hover {
+    background-color: #a71d2a;
+}
+
 
 /*CONTACTS DOWN*/
 .conbox{
@@ -609,6 +785,11 @@ textarea.messagearea {
 .emailinfo a {
     color: inherit;     
     text-decoration: none; 
+    transition: text-decoration 0.3s ease;
+}
+
+.emailinfo a:hover {
+    text-decoration: underline;
 }
 
 .contactinfo {
@@ -617,10 +798,11 @@ textarea.messagearea {
     margin-bottom: 20px;
 }
 
+
 /* FOOTER */
 .end{
-    color: white;
-    background-color: #050a30;
+    color: #050a30;
+    background-color: white;
     padding: 30px 20px;
     justify-content: center;
     align-items: center;     

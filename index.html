@@ -25,7 +25,7 @@
 <!-- DESKTOP NAV -->
     <nav id="desktop-nav">
         <div class="logo">
-            <a href="#up">rica</a>
+            <img src="./assets/logo.png" href="#up"/>
         </div>
             <div>
                 <ul class="nav-links">
@@ -40,7 +40,7 @@
 <!-- MOBILE NAV -->
     <nav id="mobile-nav">
         <div class="logo">
-            <a href="#up">rica</a>
+            <img src="./assets/logo.png" href="#up"/>
         </div>
         <div class="mobile-menu">
             <div class="mobile-icon" onclick="toggleMenu()">
@@ -64,7 +64,7 @@
         <div class="profile-info">
             <h1 class="profile-name">RICA MAY I. ZALDIVIA</h1>
             <h3 class="profile-course">BACHELOR OF SCIENCE IN COMPUTER SCIENCE</h3>
-            <p class="profiletext">Lorem ipsum odor amet, consectetuer adipiscing elit.</p>
+            <p class="profiletext">I'm a third-year Computer Science student, currently gaining experience in coding and exploring<br>different technologies. I’m focused on expanding my skills through coursework and personal projects.<br>Feel free to check out my portfolio to see my work so far.</p>
             
             <!-- BUTTON -->
             <div class="btn-container">
@@ -110,7 +110,7 @@
 
         <!-- PROFILE PHOTO -->
         <div class="picture-container">
-            <img src="./assets/rica.jpg" alt="Rica Zaldivia" />
+            <img src="./assets/me.jpeg" alt="Rica Zaldivia" />
         </div>
     </section>
 
@@ -200,7 +200,7 @@
 
                 <!-- EDUCATION TEXT AND PHOTO -->
                 <h1 class="eductext">EDUCATION</h1>
-                    <img src="./assets/figma.png" alt="figma" class="educpic"/>
+                    <img src="./assets/Cvsu.jpg" alt="BSCS" class="educpic"/>
                     <h2 class="educ">Bachelor of Science in Computer Science</h2>
                     <p class="educdesc">Cavite State University Bacoor Campus (Currently)</p>
                     <h2 class="educ">Science, Technology, Engineering, and Mathematics</h2>
@@ -281,8 +281,8 @@
             <h4>THE 1975</h4>
             <p>HTML and CSS</p>
             <div class="probtn">
-                <button class="probtnone" onclick="location.href=''">Code</button>
-                <button class="probtntwo" onclick="location.href=''">View</button>
+                <button class="probtnone" onclick="location.href='https://github.com/ricazaldiviaaa/1975'">Code</button>
+                <button class="probtntwo" onclick="location.href='https://ricazaldiviaaa.github.io/1975/'">View</button>
             </div>
         </div>
 
@@ -292,7 +292,7 @@
             <h4>ATTENDANCE</h4>
             <p>JAVA (Source code deleted, but here's the design)</p>
             <div class="secondprobtn">
-                <button class="secondprobtnone" onclick="location.href=''">View Design</button>
+                <button class="secondprobtnone"><a href="https://www.canva.com/design/DAF0DmaDbnY/Fr1U0_oiOUVnf8r595eRVQ/edit?utm_content=DAF0DmaDbnY&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton">View Design</a></button>
             </div>
         </div>
 
@@ -313,7 +313,7 @@
             <h4>ENROLLMENT SYSTEM (on going)</h4>
             <p>HTML, CSS, JAVASCIRPT, SQL AND PHP</p>
             <div class="fourthprobtn">
-                <button class="fourthprobtnone" onclick="location.href=''">Code</button>
+                <button class="fourthprobtnone" onclick="location.href='https://github.com/ricazaldiviaaa/EnrollmentSystem'">Code</button>
             </div>
         </div>
 
@@ -340,14 +340,23 @@
                         <button type="button" class="submit-button" onclick="sendMail(event)">Send Message</button>
                     </form>
                 </div>
-            </div>
-            
+
                 <!-- Thank You Message (Initially Hidden) -->
                 <div id="thank-you-message" style="display: none;">
-                    <p>Thank you for your message! We will get back to you shortly.</p>
+                    <p class="thanktext">Thank you for your message! We will get back to you shortly.</p>
                     <button onclick="showForm()" class="thankbtn">Submit Another Message</button>
                 </div>                
+            </div>
 
+            <!-- Custom Alert Modal -->
+            <div id="alertModal" class="alert-modal">
+                <div class="alert-content">
+                    <span class="alert-icon">!</span>
+                    <p id="alertMessage"></p>
+                    <button onclick="closeAlert()">Close</button>
+                </div>
+            </div>
+            
             <div class="conbox">
                 <h2 class="contactinfo">CONTACT INFO</h2>
                     <div class="infophoto">
@@ -357,7 +366,7 @@
                         </div>
                         <div class="info-img">
                             <img src="./assets/mail.png" alt="Personal" />
-                            <p class="emailinfo"><a href="mailto:ricamayzaldivia@gmail.com">ricamay.zaldivia@cvsu.edu.ph</a><p>
+                            <p class="emailinfo"><a href="mailto:ricamayzaldivia@gmail.com">ricamayzaldivia@gmail.com</a><p>
                         </div>
                         <div class="info-img">
                             <img src="./assets/mail.png" alt="School" />

@@ -5,9 +5,9 @@ function toggleMenu(){
     icon.classList.toggle("open");
 }
 
+/*AFTER SENDING MESSAGE AND VALIDATION */
 function sendMail(event) {
-    event.preventDefault(); 
-
+    event.preventDefault();
 
     let name = document.getElementById("name").value;
     let email = document.getElementById("email").value;
@@ -15,17 +15,17 @@ function sendMail(event) {
 
     // Validation
     if (!name) {
-        alert("Please enter your name.");
+        showAlert("Please enter your name.");
         return;
     }
 
     if (!email || !email.includes("@")) {
-        alert("Please enter a valid email address.");
+        showAlert("Please enter a valid email address.");
         return;
     }
 
     if (!message) {
-        alert("Please enter your message.");
+        showAlert("Please enter your message.");
         return;
     }
 
@@ -39,18 +39,27 @@ function sendMail(event) {
         .then(function(response) {
             console.log("Email Sent:", response);
 
-            document.getElementById("conform").style.display = "none"; 
-            document.getElementById("thank-you-message").style.display = "block"; 
+            document.getElementById("conform").style.display = "none";
+            document.getElementById("thank-you-message").style.display = "block";
         }, function(error) {
             console.log("Error sending email: ", error);
         });
 }
 
-function showForm() {
-
-    document.getElementById("thank-you-message").style.display = "none"; 
-    document.getElementById("conform").style.display = "block"; 
-    document.getElementById("conform").reset();
+function showAlert(message) {
+    const alertMessage = document.getElementById('alertMessage');
+    alertMessage.textContent = message;
+    const alertModal = document.getElementById('alertModal');
+    alertModal.style.display = 'flex';
 }
 
- 
+function closeAlert() {
+    const alertModal = document.getElementById('alertModal');
+    alertModal.style.display = 'none';
+}
+
+function showForm() {
+    document.getElementById("thank-you-message").style.display = "none";
+    document.getElementById("conform").style.display = "block";
+    document.getElementById("conform").reset();
+}
