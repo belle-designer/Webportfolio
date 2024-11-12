@@ -264,9 +264,6 @@ PROFILE
     .thankbtn {
         font-size: 1em;
     }
-}
-
-@media screen and (max-width: 600px) {
 
     .conh4 {
         font-size: 1.4em;
