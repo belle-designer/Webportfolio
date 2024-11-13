@@ -12,14 +12,13 @@
 }
 
 /*PROFILE*/
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 910px) {
     #profile {
         display: flex;
         flex-direction:column-reverse;
         justify-content: center; 
         align-items: center;   
-        padding: 100px;
-        height: 50vh; 
+        padding: 50px;
         text-align: center; 
     }
 
