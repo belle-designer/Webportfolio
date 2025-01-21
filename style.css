@@ -741,14 +741,11 @@ textarea.messagearea {
 
 
 /*CONTACTS DOWN*/
-.conbox{
-    border: 2px solid #000;  
+.conbox{  
     padding: 15px;          
-    margin: 10px 0;         
-    border-radius: 50px;    
-    background-color: #f9f9f9;
-    width: 90%;            
-    box-sizing: border-box;  
+    margin: 10px 0;             
+    width: 100%;            
+    /*box-sizing: border-box;*/  
     text-align: center;     
     transition: transform 0.3s ease, box-shadow 0.3s ease; 
 }
@@ -801,8 +798,8 @@ textarea.messagearea {
 
 /* FOOTER */
 .end{
-    color: #050a30;
-    background-color: white;
+    color: white;
+    background-color: #050a30;
     padding: 30px 20px;
     justify-content: center;
     align-items: center;     
