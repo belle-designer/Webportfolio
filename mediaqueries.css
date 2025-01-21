@@ -348,4 +348,21 @@
         background-size:cover;
         font-size: small;
     }
+
+    .conbox {
+        width: auto;
+        align-items: center;
+        text-align: center;
+    }
+
+    .contactinfo {
+        text-align: center;
+    }
+
+    .infophoto {
+        text-align: center;
+        align-items: center;
+        font-size: 0.5rem;
+        overflow-x: auto;
+    }
 } 
